@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        
+    </script>
+</head>
+<body>
+    testing:<input type="checkbox" id="cc" value=1><br>
+    <select name="" id="dd">
+
+        <option >a</option>
+        <option >b</option>
+        <option >c</option>
+        <option >d</option>
+    </select>
+    <br>
+    <button id="but1">Button 1</button><br>
+    <button id="but2" >Button 2</button>
+</body>
+<script>
+
+$(document).ready(function(){
+    $("#but1").hide()
+    $(dd).on('change',function(){
+        $vari = $("#dd").val();
+        alert($vari);
+
+        if($vari == "b")
+        {
+            $("#but1").show();
+        }
+        else
+        {
+            $("#but1").hide()
+        }
+    });
+
+    // if($("#cc").not(':checked').length){
+    //     alert(124);
+    // }else
+    // {
+    //     alert(456);
+    // }
+
+
+    $("#cc").on("click",function(){
+
+        if($("#cc").prop('checked') == true){
+            alert(132);
+        }
+        else
+        {
+            alert(234);
+        }
+        
+        // if($cc === "checked")
+        // {
+        //     alert(124);
+        // }
+        // else
+        // {
+        //     alert(446);
+        // }
+    });
+       
+});
+
+</script>
+</html>
